@@ -38,6 +38,7 @@ export const CounterApp = ({ value }) => {
             </button>
 
             <button
+                aria-label='btn-reset'
                 onClick={ ()=> setCounter(value) } 
                 className="btn"
             >

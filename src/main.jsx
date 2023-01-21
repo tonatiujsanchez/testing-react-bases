@@ -11,6 +11,7 @@ import './styles.css'
 
 ReactDOM.createRoot(document.getElementById('root') ).render(
     <React.StrictMode>
-        <CounterApp value={ 5 } />
+        {/* <FirstApp title="Hi! i'm Ton.dev" /> */}
+        <CounterApp value={ 100 } />
     </React.StrictMode>
 )

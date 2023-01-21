@@ -1,41 +1,26 @@
 import PropTypes from 'prop-types'
 
 
-const getLastname = () => 'Sánchez'
-const name = 'Ton J.'
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-
-export const FirstApp = (props) => {
-
-    return (
-            <SecondApp 
-                title="Hi! I'm Ton J." 
-                subtitle="Developer and Martial artist"
-            />
-    )
-}
-
-
-
-
-export const SecondApp = ({ title, subtitle }) => {
+export const FirstApp = ({ title, subtitle, name }) => {
     
     return (
         <div>
-            <h1 style={{ margin: 0 }}>{title}</h1>
-            <h3 style={{ margin: 0 }}><strong>{subtitle}</strong></h3>
-            <p style={{ margin: 0 }}>{numbers}</p>
+            <h1 data-testid="test-title" style={{ margin: 0 }}> { title } </h1>
+            <h2 style={{ margin: 0 }}><strong>{ subtitle }</strong></h2>
+            <h2 style={{ margin: 0 }}><strong>{ subtitle }</strong></h2>
+            <p style={{ margin: 0 }}>{ name }</p>
         </div>
     )
 }
 
-SecondApp.propTypes = {
+FirstApp.propTypes = {
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired
 }
 
-SecondApp.defaultProps = {
-    title: 'Sin título',
-    subtitle: 'Sin subtítulo'
+FirstApp.defaultProps = {
+    name: 'Tonatiuj Sácnhez',
+    subtitle: 'Sin subtítulo',
+    // title: 'Sin título',
 }
